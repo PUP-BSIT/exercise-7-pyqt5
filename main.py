@@ -42,7 +42,7 @@ if __name__ == "__main__":
     # customer_name will be used to store customer name
     # senior_id will be used to store senior ID no.
 
-    # TODO(Caya): Implement get_order_details function
+    get_order_details(items, add_item)
 
     customer_name = input("\nEnter your name: ")
     senior_id = input("Enter your senior id no. (Leave blank if N/A): ")
