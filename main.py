@@ -34,12 +34,12 @@ def calculate_grand_total(items, senior_id):
     return grand_total
 
 def display_order_summary(items, customer_name, senior_id, grand_total):
-    print("\n==================== ITEMS ===================")
+    print("\n=================== ITEMS ====================")
     print("Product Name\t Price\t Quantity\t Total")
 
     for item in items:
         print("----------------------------------------------")
-        if len(item[0]) >8:
+        if len(item[0]) > 8:
             print(f"{item[0]}\t {item[1]}\t {item[2]}\t\t {item[3]}")
         else:
             print(f"{item[0]}\t\t {item[1]}\t {item[2]}\t\t {item[3]}")
