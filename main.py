@@ -44,7 +44,8 @@ if __name__ == "__main__":
 
     # TODO(Caya): Implement get_order_details function
 
-    # TODO(Condino): Add get customer name, and senior id input handling
+    customer_name = input("\nEnter your name: ")
+    senior_id = input("Enter your senior id no. (Leave blank if N/A): ")
 
     grand_total = calculate_grand_total(items, senior_id)
 
