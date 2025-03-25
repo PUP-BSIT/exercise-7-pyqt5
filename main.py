@@ -29,7 +29,7 @@ if __name__ == "__main__":
     # customer_name will be used to store customer name
     # senior_id will be used to store senior ID no.
 
-    # TODO(Caya): Implement get_order_details function
+    get_order_details(items, add_item)
 
     # TODO(Condino): Add get customer name, and senior id input handling
 
