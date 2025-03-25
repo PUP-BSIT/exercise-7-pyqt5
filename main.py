@@ -39,7 +39,10 @@ def display_order_summary(items, customer_name, senior_id, grand_total):
 
     for item in items:
         print("----------------------------------------------")
-        print(f"{item[0]}\t {item[1]}\t {item[2]}\t\t {item[3]}")
+        if len(item[0]) >8:
+            print(f"{item[0]}\t {item[1]}\t {item[2]}\t\t {item[3]}")
+        else:
+            print(f"{item[0]}\t\t {item[1]}\t {item[2]}\t\t {item[3]}")
     
     print("==============================================")
     print(f"Customer Name: {customer_name}")
