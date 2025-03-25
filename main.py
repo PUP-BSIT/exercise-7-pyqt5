@@ -42,7 +42,10 @@ def display_order_summary(items, customer_name, senior_id, grand_total):
         print(f"{item[0]}\t {item[1]}\t {item[2]}\t\t {item[3]}")
     
     print("==============================================")
-
+    print(f"Customer Name: {customer_name}")
+    print(f"Senior Citizen ID: {senior_id}")
+    print(f"Grand Total: {grand_total}")
+    
 if __name__ == "__main__":
     os.system('cls' if os.name == 'nt' else 'clear')
     
@@ -56,9 +59,7 @@ if __name__ == "__main__":
 
     customer_name = input("\nEnter your name: ")
     senior_id = input("Enter your senior id no. (Leave blank if N/A): ")
-
-    # TODO(Cordova): Implement calculate_grand_total function
-
-    # TODO(Arguelles): Implement display_order_summary function
-
-    # TODO(Gutierrez): Implement display_order_summary function
+    
+    grand_total = calculate_grand_total(items, senior_id)
+    
+    display_order_summary(items, customer_name, senior_id, grand_total)
