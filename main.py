@@ -20,6 +20,19 @@ def get_order_details(items, add_item):
     # Recursively call the function to continue adding items
     return get_order_details(items, add_item)
 
+def calculate_grand_total(items, senior_id):
+    grand_total = 0
+    # Iterate through the item list
+    for product in items:
+        grand_total += product[3]
+
+    # Checks if senior_id is empty (spaces)
+    if senior_id.strip():
+        discount_rate = grand_total * 0.10
+        return grand_total - discount_rate
+    
+    return grand_total
+
 if __name__ == "__main__":
     os.system('cls' if os.name == 'nt' else 'clear')
     
@@ -33,7 +46,7 @@ if __name__ == "__main__":
 
     # TODO(Condino): Add get customer name, and senior id input handling
 
-    # TODO(Cordova): Implement calculate_grand_total function
+    grand_total = calculate_grand_total(items, senior_id)
 
     # TODO(Arguelles): Implement display_order_summary function
 
