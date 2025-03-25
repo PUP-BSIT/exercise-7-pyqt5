@@ -20,6 +20,19 @@ def get_order_details(items, add_item):
     # Recursively call the function to continue adding items
     return get_order_details(items, add_item)
 
+def calculate_grand_total(items, senior_id):
+    grand_total = 0
+    # Iterate through the item list
+    for product in items:
+        grand_total += product[3]
+
+    # Checks if senior_id is empty (spaces)
+    if senior_id.strip():
+        discount_rate = grand_total * 0.10
+        return grand_total - discount_rate
+    
+    return grand_total
+
 def display_order_summary(items, customer_name, senior_id, grand_total):
     print("\n==================== ITEMS ===================")
     print("Product Name\t Price\t Quantity\t Total")
@@ -39,10 +52,13 @@ if __name__ == "__main__":
     # customer_name will be used to store customer name
     # senior_id will be used to store senior ID no.
 
-    # TODO(Caya): Implement get_order_details function
+    get_order_details(items, add_item)
 
-    # TODO(Condino): Add get customer name, and senior id input handling
+    customer_name = input("\nEnter your name: ")
+    senior_id = input("Enter your senior id no. (Leave blank if N/A): ")
 
     # TODO(Cordova): Implement calculate_grand_total function
+
+    # TODO(Arguelles): Implement display_order_summary function
 
     # TODO(Gutierrez): Implement display_order_summary function
