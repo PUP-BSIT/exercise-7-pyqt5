@@ -20,6 +20,16 @@ def get_order_details(items, add_item):
     # Recursively call the function to continue adding items
     return get_order_details(items, add_item)
 
+def display_order_summary(items, customer_name, senior_id, grand_total):
+    print("\n==================== ITEMS ===================")
+    print("Product Name\t Price\t Quantity\t Total")
+
+    for item in items:
+        print("----------------------------------------------")
+        print(f"{item[0]}\t {item[1]}\t {item[2]}\t\t {item[3]}")
+    
+    print("==============================================")
+
 if __name__ == "__main__":
     os.system('cls' if os.name == 'nt' else 'clear')
     
@@ -34,7 +44,5 @@ if __name__ == "__main__":
     # TODO(Condino): Add get customer name, and senior id input handling
 
     # TODO(Cordova): Implement calculate_grand_total function
-
-    # TODO(Arguelles): Implement display_order_summary function
 
     # TODO(Gutierrez): Implement display_order_summary function
