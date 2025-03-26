@@ -25,8 +25,8 @@ def get_order_details(items):
 def calculate_grand_total(items, senior_id):
     grand_total = 0
     # Iterate through the item list
-    for product in items:
-        grand_total += product[3]
+    for item in items:
+        grand_total += item[3]
 
     # Checks if senior_id is empty (spaces)
     if senior_id.strip():
